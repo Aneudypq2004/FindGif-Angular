@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
+import { GifsModule } from './gifs/gifs.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [
+    SharedModule,
+    GifsModule,
+  ]
 })
 export class AppComponent {
   title = 'gifApp';
